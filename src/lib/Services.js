@@ -1,4 +1,4 @@
-import HelpersMethod from '../lib/HelpersMethod'
+import Helper from '../lib/Helper'
 
 const Services = {};
 

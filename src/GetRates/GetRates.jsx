@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import HelpersMethod from '../lib/HelpersMethod';
+import Helper from '../lib/Helper';
 import Services from '../lib/Services';
 import Store from "../lib/Store";
 
@@ -32,7 +32,7 @@ class GetRates extends PureComponent {
 
   getAllRates = (isRefresh) => {
     console.log('>>'+isRefresh);
-    let url_getAllRates = 'https://api.exchangeratesapi.io/history?start_at=' + HelpersMethod.getDateRange().start + '&end_at=' + HelpersMethod.getDateRange().end + '&symbols=GBP,EUR,AUD,CAD&base=USD';
+    let url_getAllRates = 'https://api.exchangeratesapi.io/history?start_at=' + Helper.getDateRange().start + '&end_at=' + Helper.getDateRange().end + '&symbols=GBP,EUR,AUD,CAD&base=USD';
     //reset array
     Store.length = 0;
     this.setState({ rMainArray: Store }, () => console.log('__reset rMainArray__'));
